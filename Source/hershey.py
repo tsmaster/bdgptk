@@ -1,9 +1,11 @@
 import math
 import random
 import pathlib
+import inspect
 
 import drawSvg as draw
 import bdgmath as m
+import hersheyassets
 
 def unwrapFile(f):
     prevLine = None
@@ -128,14 +130,19 @@ def getHersheyBounds(s):
 
 
 class HersheyFont:
-    def __init__(self, filename):
-        pp = pathlib.PurePath(filename)
-        self.name = pp.stem
+    def __init__(self, fontname):
+        asset_dir = pathlib.PurePath(inspect.getfile(hersheyassets)).parents[1] / "Assets/Hershey"
+
+        asset = hersheyassets.findByName(fontname)
+        font_filename = asset.filename()
+        filename = asset_dir / font_filename
+
+        self.name = filename.stem
 
         self.lines = []
         self.bounds = {}
 
-        self.extraCharSpacing = 0
+        self.extraCharSpacing = asset.charSpacing
 
         self.readFile(filename)
 
