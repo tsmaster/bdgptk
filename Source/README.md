@@ -61,10 +61,9 @@ better order than they were submitted.
 There's no connection to Deadpool, the foul-mouthed Marvel
 character. But you're free to think of him if you like.
 
-## hershey.py / hersheyassets.py
+## hershey.py
 
-An implementation of Hershey fonts. I don't like the current API, so
-TODO I should make this cleaner. I should also document what fonts are
+An implementation of Hershey fonts. I should document what fonts are
 here, because that seemed like hit-and-miss when I grabbed the
 repository.
 
@@ -73,6 +72,10 @@ repository.
 I love me some hexagon grids. This (re-)implements some of that code
 that I rewrite over and over again. Hat tip to Amit's Red Blob Games
 Hexagon Grids documentation, which is super awesome.
+
+https://www.redblobgames.com/grids/hexagons/
+https://www.redblobgames.com/grids/hexagons/implementation.html
+https://www.redblobgames.com/grids/hexagons/more-pixel-to-hex.html
 
 I prefer cubic representation with points up.
 
