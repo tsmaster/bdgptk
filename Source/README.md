@@ -11,6 +11,10 @@ An implementation of Knuth's "Algorithm X", a recursive
 backtracker that can solve exact cover problems reasonably
 efficiently.
 
+Admittedly, not super relevant to most plotter projects, but it's
+cool.
+
+
 ## bdgmath.py
 
 A perhaps-too-heavy folder of math routines, which includes my own
